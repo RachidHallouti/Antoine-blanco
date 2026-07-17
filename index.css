@@ -1,29 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-family: "Poppins";
-  box-sizing: border-box;
-  scrollbar-width: thin;
-  scrollbar-color: #db3d4c transparent;
+:root {
+  --primary: #db3d4c;
+  --black: #1a1a1a;
+  --dark: #0f0f0f;
 }
-body {
-  overflow-x: hidden;
-}
-.line,
-.word,
-.char {
-  color: inherit;
-}
+
 @font-face {
   font-family: "sigustil";
   src: url("./assets/fonts/Sigustil\ Regular.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.line,
+.word,
+.char {
+  color: inherit;
+}
 
 .hero {
-  background-color: #0f0f0f;
+  background-color: var(--dark);
   padding: 75px 56px;
   position: relative;
   z-index: 1;
@@ -148,7 +154,7 @@ article {
 }
 
 .carrousel p:hover {
-  color: #db3d4c;
+  color: var(--primary);
 }
 
 .tre {
@@ -175,7 +181,7 @@ article {
 }
 
 .red {
-  color: #db3d4c;
+  color: var(--primary);
 }
 
 .black {
@@ -245,7 +251,7 @@ article {
 }
 .article-4 button {
   position: absolute;
-  background-color: #db3d4c;
+  background-color: var(--primary);
   border: none;
   padding: 14px 16px;
   border-radius: 16px;
@@ -262,7 +268,7 @@ article {
 }
 
 .section-2 .side {
-  background-color: #db3d4c;
+  background-color: var(--primary);
   width: 70px;
   display: flex;
   justify-content: center;
@@ -284,7 +290,7 @@ article {
 }
 
 .section-2 .img-container {
-  background-color: #db3d4c;
+  background-color: var(--primary);
   padding: 30px;
   border-radius: 50%;
   width: fit-content;
@@ -328,7 +334,7 @@ article {
 }
 
 .section-2 .text-center {
-  background-color: #db3d4c;
+  background-color: var(--primary);
 }
 .section-2 h2 {
   font-size: 60px;
@@ -355,7 +361,7 @@ button {
 }
 
 .section-3 {
-  background-color: #0f0f0f;
+  background-color: var(--dark);
   padding-top: 50px;
   padding-bottom: 30px;
 
@@ -455,7 +461,7 @@ button {
 }
 
 .article-5 .button {
-  background-color: #db3d4c;
+  background-color: var(--primary);
   margin-top: 30px;
 }
 .article-6 {
@@ -470,7 +476,7 @@ button {
   height: auto;
 }
 .ant {
-  color: #db3d4c;
+  color: var(--primary);
   top: 0;
   left: 0;
   -webkit-text-stroke: 1px white;
@@ -479,7 +485,7 @@ button {
   color: white;
   bottom: 0;
   right: 0;
-  -webkit-text-stroke: 1px #db3d4c;
+  -webkit-text-stroke: 1px var(--primary);
 }
 .ant,
 .oine {
@@ -491,7 +497,7 @@ button {
   z-index: 1;
 }
 .blanco {
-  color: #db3d4c;
+  color: var(--primary);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -502,7 +508,7 @@ button {
   z-index: 1;
 }
 footer {
-  background-color: #0f0f0f;
+  background-color: var(--dark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -522,7 +528,7 @@ footer .p-3 {
 }
 footer .p-4 {
   max-width: 50%;
-  color: #db3d4c;
+  color: var(--primary);
   font-weight: 600;
   margin-top: 40px;
 }
@@ -535,7 +541,17 @@ section {
     0 0 0 1px rgba(0, 0, 0, 0.05);
   min-height: 100dvh;
 }
+.button {
+  transition: transform 0.3s ease;
+}
 
+.button:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+}
 @media (max-width: 768px) {
   .hero {
     padding: 30px 20px;
